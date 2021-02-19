@@ -30,12 +30,6 @@ RUN apk upgrade && \
         npm \
         bash \
         librdkafka-dev && \
-    docker-php-ext-configure gd \
-      --with-gd \
-      --with-freetype-dir=/usr/include/ \
-      --with-png-dir=/usr/include/ \
-      --with-jpeg-dir=/usr/include/ \
-      --with-webp-dir=/usr/include/ && \
     docker-php-ext-install pdo_mysql mysqli gd exif intl xsl soap zip opcache sockets bcmath pcntl && \
     docker-php-source delete
 
